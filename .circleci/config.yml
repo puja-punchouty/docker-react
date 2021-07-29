@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: pujapunchouty/docker-react
+      - image: node:alpine
     steps:
       - checkout
       - run: echo "Puja Says Hello from circle ci config file"
