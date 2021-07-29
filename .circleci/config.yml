@@ -1,0 +1,16 @@
+jobs:
+  build:
+    docker:
+      - image: docker build -t pujapunchouty/docker-react -f Dockerfile.dev .
+
+       
+  test:
+    docker:
+      - image: docker run -e CI=true pujapunchouty/docker-react npm run test
+  
+# Orchestrate our job run sequence
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test
