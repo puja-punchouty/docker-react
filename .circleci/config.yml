@@ -7,5 +7,8 @@ jobs:
     steps:
       - checkout
       - run : echo "Puja Says Hello from circle ci config file"
+      - run:
+          name: Run tests
+          command: npm test
 
     
