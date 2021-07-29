@@ -8,8 +8,8 @@ jobs:
       - checkout
       - run: echo "Puja Says Hello from circle ci config file"
       - run:
-          name: Node version
-          command: node -v 
+          name: Package install
+          command: npm install
       - run:
           name: Run tests
           command: npm test
