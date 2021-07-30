@@ -5,10 +5,10 @@ jobs:
     docker:
       - image: pujapunchouty/docker-react
     steps:
-      # - checkout
+      - checkout
       - run: echo "Puja Says Hello from circle ci config file"
       - run:
-          name: Package install
+          name: Node version
           command: npm install
       - run:
           name: Run tests
